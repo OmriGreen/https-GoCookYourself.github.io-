@@ -1,41 +1,76 @@
-
-<!DOCTYPE html>
-<html>
-<body>
-	<svg width="9000" height="80">
-		<rect width="1500" height="100" style="fill:#93C572;"></rect>
-		<text x="20" y="50" font-weight="bold" style="font-size:50px" style="color:#ffffff;">CollegeCooks</text>
-	  </svg>
-<body>
-	<svg width="9000" height="50">
-		<rect width="1500" height="30" style="fill:rgb(201, 201, 201);"></rect>>
-	  </svg>
-<!DOCTYPE html>
-
-<html>
-   <head>
-      <title>HTML Background Color</title>
-   </head>
-   <body style="background-color:rgb(255, 250, 233);">
-</html>
-
-
-<br>
-<br>
-
-<img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://static.wixstatic.com/media/749b22_c19bf71c30d34e5d8098b9db7d34fd81~mv2.jpg/v1/fill/w_1960,h_876,al_c,q_85,usm_0.66_1.00_0.01/smart-food-banner.webp format=2500w" width="1500" height="500">
-<br>
-<br>
 <!DOCTYPE html>
 <html>
 
-  <html>
-    <head>
-       <title>HTML Background Color</title>
-    </head>
-    <body style="background-color:rgb(255, 255, 255);">
-</body>
- 
+    <body>
+        <svg width="9000" height="80">
+            <rect width="1500" height="100" style="fill:#93C572;"></rect>
+            <text x="20" y="60" font-weight="bold" style="font-size:50px" style="color:#ffffff;">CollegeCooks</text>
+        </svg>
+    <body>
+        <svg width="9000" height="50">
+            <rect width="1500" height="30" style="fill:rgb(201, 201, 201);"></rect>>
+            <text x="20" y="20">
+                <a href=file:///C:/Users/ledah/OneDrive/Desktop/test.htm>Home Page</a>
+            </text>
+            <text x="120" y="20">
+                <a href=file:///C:/Users/ledah/OneDrive/Desktop/test.htm>My Fridge</a>
+            </text>
+            <text x="220" y="20">
+                <a href=file:///C:/Users/ledah/OneDrive/Desktop/test.htm>My account</a>
+            </text>
+            <text x="320" y="20">
+                <a href=file:///C:/Users/ledah/OneDrive/Desktop/welcome.html?fname=Lexi&lname=f&email=g>Welcome Survey</a>
+            </text>
+    
+          </svg>
+    <!DOCTYPE html>
+    
+    
+    
+    <!--changes the background color-->
+    <html>
+       <head>
+          <title>HTML Background Color</title>
+       </head>
+       <body style="background-color:#fcfaeb;">
+    </html>
+    
+    
+    <!--image banner-->
+    <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://static.wixstatic.com/media/749b22_c19bf71c30d34e5d8098b9db7d34fd81~mv2.jpg/v1/fill/w_1960,h_876,al_c,q_85,usm_0.66_1.00_0.01/smart-food-banner.webp format=2500w" width="1500" height="600">
+    
+    
+    
+    
+    <!-- HTML Codes by Quackit.com -->
+    <!DOCTYPE html>
+    <style>
+    div.container {
+    background-color: #ffffff;
+    }
+    div.container p {
+    font-family: Garamond;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: normal;
+    text-decoration: none;
+    text-transform: none;
+    color: #e3e3e3;
+    background-color: #3d3d3d;
+    text-align:center
+    }
+    </style>
+    
+
+
+
+
+<br>
+<br>
+
+<script>
+src = "html"
+</script>
 
 <script>
   let fname = '';
@@ -71,27 +106,27 @@ function saveDietaryInfo()
   {
     dietRestr.push('Halal');
   }
-  if(document.getElementById('Gluten Free').checked)
+  /*if(document.getElementById('Gluten Free').checked)
   {
     dietRestr.push('Gluten Free');
   }
   if(document.getElementById('Nut Allergy').checked)
   {
     dietRestr.push('Nut Allergy');
-  }
-  let allRestr = '';
+  }*/
+  allRestr = '';
   for(let i in dietRestr)
   {
     allRestr += dietRestr[i];
-    allRestr += ", ";
+    allRestr += ', ';
   }
-  alert(allRestr);
+  //fs.writeFile('userdata.txt', allRestr);
 }
 function saveAndRedirect()
 {
   saveUserInfo();
   saveDietaryInfo();
-  window.open('test.htm');
+  window.location.replace('test.htm');
 }
 </script>
 
@@ -118,10 +153,12 @@ function saveAndRedirect()
   <label for="Kosher">Kosher</label><br>
   <input type="checkbox" id="Vegan" name="diet_option" value="Vegan"style="margin-left:45%;">
   <label for="Vegan">Vegan</label><br>
-  <input type="checkbox" id="Gluten Free" name="diet_option" value="Gluten Free"style="margin-left:45%;">
+  <!--<input type="checkbox" id="Gluten Free" name="diet_option" value="Gluten Free"style="margin-left:45%;">
   <label for="Gluten Free">Gluten Free</label><br>
   <input type="checkbox" id ="Nut allergy" name="diet_option" value="Nut allergy"style="margin-left:45%;">
-  <label for="Nut allergy">Nut allergy</label><br>
+  <label for="Nut allergy">Nut allergy</label><br>-->
+  <button type="button" onclick="saveAndRedirect();" id="Done" name="Done" style="margin-left:45%">Done</button>
+  
 </form>
 <br>
 
@@ -144,5 +181,5 @@ function saveAndRedirect()
 	</style>
 </head>
 <body>
-	<button type="button" onclick="saveAndRedirect();" id="Done" name="Done" style="margin-left:45%">Done</button>
+	<!--<button type="button" onclick="saveAndRedirect();" id="Done" name="Done" style="margin-left:45%">Done</button>-->
 </body>
