@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+	<svg width="9000" height="80">
+		<rect width="1500" height="100" style="fill:#93C572;"></rect>
+		<text x="20" y="50" font-weight="bold" style="font-size:50px" style="color:#ffffff;">CollegeCooks</text>
+	  </svg>
+<body>
+	<svg width="9000" height="50">
+		<rect width="1500" height="30" style="fill:rgb(201, 201, 201);"></rect>>
+	  </svg>
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>HTML Background Color</title>
+   </head>
+   <body style="background-color:rgb(255, 250, 233);">
+</html>
+
+
+<br>
+<br>
+
+<img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://static.wixstatic.com/media/749b22_c19bf71c30d34e5d8098b9db7d34fd81~mv2.jpg/v1/fill/w_1960,h_876,al_c,q_85,usm_0.66_1.00_0.01/smart-food-banner.webp format=2500w" width="1500" height="500">
+<br>
+<br>
+<!DOCTYPE html>
+<html>
+
+  <html>
+    <head>
+       <title>HTML Background Color</title>
+    </head>
+    <body style="background-color:rgb(255, 255, 255);">
+</body>
+ 
+
+<script>
+  let fname = '';
+  let lname = '';
+  let email = '';
+  let dietRestr = [];
+
+function saveUserInfo()
+{
+  fname = document.getElementById("fname").value;
+  lname = document.getElementById("lname").value;
+  email = document.getElementById("email").value;
+}
+function saveDietaryInfo()
+{
+  if(document.getElementById("None").checked)
+  {
+    dietRestr.push('None');
+  }
+  if(document.getElementById('Vegetarian').checked)
+  {
+    dietRestr.push('Vegetarian');
+  }
+  if(document.getElementById('Vegan').checked)
+  {
+    dietRestr.push('Vegan');
+  }
+  if(document.getElementById('Kosher').checked)
+  {
+    dietRestr.push('Kosher');
+  }
+  if(document.getElementById('Halal').checked)
+  {
+    dietRestr.push('Halal');
+  }
+  if(document.getElementById('Gluten Free').checked)
+  {
+    dietRestr.push('Gluten Free');
+  }
+  if(document.getElementById('Nut Allergy').checked)
+  {
+    dietRestr.push('Nut Allergy');
+  }
+  let allRestr = '';
+  for(let i in dietRestr)
+  {
+    allRestr += dietRestr[i];
+    allRestr += ", ";
+  }
+  alert(allRestr);
+}
+function saveAndRedirect()
+{
+  saveUserInfo();
+  saveDietaryInfo();
+  window.open('test.htm');
+}
+</script>
+
+<form id="userInfo">
+  <label for="fname"style="margin-left:45%; margin-right:10%;">First name:</label><br>
+  <input type="text" id="fname" name="fname"style="margin-left:45%; margin-right:10%;"><br>
+  <label for="lname"style="margin-left:45%; margin-right:10%;">Last name:</label><br>
+  <input type="text" id="lname" name="lname"style="margin-left:45%; margin-right:10%;"><br>
+  <label for="email"style="margin-left:45%; margin-right:10%;">Email:</label><br>
+  <input type="text" id="email" name="email"style="margin-left:45%; margin-right:10%;">
+</form>
+
+
+<br>
+<p style="margin-left:45%; margin-right:10%;">Please select any dietary restrictions:</p>
+<form id="userDiet">
+  <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:45%;">
+  <label for="None">None</label><br>
+  <input type="checkbox" id="Vegetarian" name="diet_option" value="Vegetarian"style="margin-left:45%;">
+  <label for="Vegetarian">Vegitarian</label><br>
+  <input type="checkbox" id="Halal" name="diet_option" value="Halal"style="margin-left:45%;">
+  <label for="Halal">Halal</label><br>
+  <input type="checkbox" id="Kosher" name="diet_option" value="Kosher"style="margin-left:45%;">
+  <label for="Kosher">Kosher</label><br>
+  <input type="checkbox" id="Vegan" name="diet_option" value="Vegan"style="margin-left:45%;">
+  <label for="Vegan">Vegan</label><br>
+  <input type="checkbox" id="Gluten Free" name="diet_option" value="Gluten Free"style="margin-left:45%;">
+  <label for="Gluten Free">Gluten Free</label><br>
+  <input type="checkbox" id ="Nut allergy" name="diet_option" value="Nut allergy"style="margin-left:45%;">
+  <label for="Nut allergy">Nut allergy</label><br>
+</form>
+<br>
+
+<head>
+	<title>HTML Button Generator</title>
+	<style>
+		button {
+			color: #ffffff;
+			background-color: #93C572;
+			font-size: 40px;
+			border: 1px solid #000000;
+			border-radius: 12px;
+			padding: 10px 20px;
+			cursor: pointer
+		}
+		button:hover {
+			color: #c7c7c7;
+			background-color: #5c5b5b;
+		}
+	</style>
+</head>
+<body>
+	<button type="button" onclick="saveAndRedirect();" id="Done" name="Done" style="margin-left:45%">Done</button>
+</body>
