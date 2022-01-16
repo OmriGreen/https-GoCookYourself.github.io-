@@ -134,7 +134,6 @@ function findRecipes()
   let dietRArr = dietR.split(',');
   let ingredR = localStorage.getItem('ingredients');
   let ingredRArr = ingredR.split(',');
-  //alert(ingredRArr);
   
   for(let diet of dietRArr)
   {
@@ -174,8 +173,7 @@ function findRecipes()
     }
   });
   approvedMeals = approvedMealsNoDuplicates;
-  //alert(approvedMeals);
-
+  
   //Checks if the mealtime is accurate
   for(let a of approvedMeals){
 	  if(mealTime == 'dinner'){
@@ -194,17 +192,14 @@ function findRecipes()
 		  }
 	  }
   }
-  //alert(goodMeals);
 
   //Checks if it is done in the time specified
   for(let g of goodMeals){
-	  if(cookTime <= timeToCook[g]){
+	  if(timeToCook[g] <= cookTime){
 		  finalMeals.push(g);
 	  }
   }
-//   alert(finalMeals);
 
-  //Halal doesn't work for this for some reason, Kosher, Vegan, and vegetarian all work
   for(let f of finalMeals)
   {
 	  mealIng = ingredients[f].split(",");
@@ -219,10 +214,8 @@ function findRecipes()
 	  if(hasIngredients)
 	  {
 		  makeableMeals.push(mealName[f]);
-		//   alert(mealName[f]);
 	  }
   }
-//   alert(makeableMeals);
   localStorage.setItem('recipes', makeableMeals);
   window.location.replace('results.html');
 }
