@@ -5,6 +5,8 @@
 body {
   font-family: "Trirong", serif;
 }
+/* Set display to none for all images*/
+
 </style>
 </head>
 
@@ -40,112 +42,7 @@ body {
 <!DOCTYPE html>
 
 
-<script>
-//initializes the page with valid pictures
-function initializePage(){
-    var recipes = localStorage.getItem('recipes');
-    for(let rec of recipes){
-        if(rec == 'salad'){
-            document.getElementById("salad").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("salad").style.display = "none";    //not show img
-        }
-        if(rec == 'grilled_cheese'){
-            document.getElementById("grilled_cheese").style.display = "initial"; //show img (shows by default)
-        }
-        else{
-            document.getElementById("grilled_cheese").style.display = "none";    //not show img
-        }
-        if(rec == 'eggs'){
-            document.getElementById("eggs").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("eggs").style.display = "none";    //not show img
-        }
-        if(rec == 'toast'){
-            document.getElementById("toast").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("toast").style.display = "none";    //not show img
-        }
-        if(rec == 'cereal'){
-            document.getElementById("cereal").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("cereal").style.display = "none";    //not show img
-        }
-        if(rec == 'waffles'){
-            document.getElementById("waffles").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("waffles").style.display = "none";    //not show img
-        }
-        if(rec == 'pasta'){
-            document.getElementById("pasta").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("pasta").style.display = "none";    //not show img
-        }
-        if(rec == 'snietzel'){
-            document.getElementById("snietzel").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("snietzel").style.display = "none";    //not show img
-        }
-        if(rec == 'cheese_quesadilla'){
-            document.getElementById("cheese_quesadilla").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("cheese_quesadilla").style.display = "none";    //not show img
-        }
-        if(rec == 'baked_potatoes'){
-            document.getElementById("baked_potatoes").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("baked_potatoes").style.display = "none";    //not show img
-        }
-        if(rec == 'stir_fry'){
-            document.getElementById("stir_fry").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("stir_fry").style.display = "none";    //not show img
-        }
-        if(rec == 'rice'){
-            document.getElementById("rice").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("rice").style.display = "none";    //not show img
-        }
-        if(rec == 'tomato_soup'){
-            document.getElementById("tomato_soup").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("tomato_soup").style.display = "none";    //not show img
-        }
-        if(rec == 'steak_dinner'){
-            document.getElementById("steak_dinner").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("steak_dinner").style.display = "none";    //not show img
-        }
-        if(rec == 'chicken_dinner'){
-            document.getElementById("chicken_dinner").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("chicken_dinner").style.display = "none";    //not show img
-        }
-        if(rec == 'turkey_dinner'){
-            document.getElementById("turkey_dinner").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("turkey_dinner").style.display = "none";    //not show img
-        }
-        if(rec == 'hamburger'){
-            document.getElementById("hamburger").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("hamburger").style.display = "none";    //not show img
-        }
-        if(rec == 'pork_dinner'){
-            document.getElementById("pork_dinner").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("pork_dinner").style.display = "none";    //not show img
-        }
-        if(rec == 'shrimp_dinner'){
-            document.getElementById("shrimp_dinner").style.display = "initial"; //show img (shows by default)
-        } else {
-            document.getElementById("shrimp_dinner").style.display = "none";    //not show img
-        }
-    }
-}
 
-initializePage();
-</script>
 
 
 
@@ -175,48 +72,119 @@ initializePage();
 <!DOCTYPE html>
 <html>
 <!--salad-->
-<img id="salad" style="-webkit-user-select: none;margin-left: 4%;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg  width="170" height="200">
+<img id='salad'  style="-webkit-user-select: none; display: none; margin-left: 4%;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src = 'https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-008.jpg' width="170" height="200">
 <!--grilled cheese sandwhich-->
-<img id='grilled_cheese' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://sherrybabyrecipes.com/wp-content/uploads/2019/12/The-Perfect-Grilled-Cheese-Sandwich-800-1581-500x500.jpg  width="200" height="200">
+<img id='grilled_cheese' style="-webkit-user-select: none; display: none; margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://sherrybabyrecipes.com/wp-content/uploads/2019/12/The-Perfect-Grilled-Cheese-Sandwich-800-1581-500x500.jpg  width="200" height="200">
 <!--scrambled eggs-->
-<img id='eggs' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.simplisticallyliving.com/wp-content/uploads/2016/01/Fluffy-Scrambled-Eggs3-1024x1539.jpg.webp width="160" height="200">
+<img id='eggs' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.simplisticallyliving.com/wp-content/uploads/2016/01/Fluffy-Scrambled-Eggs3-1024x1539.jpg.webp width="160" height="200">
 <!--toast-->
-<img id='toast' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.simplyrecipes.com/thmb/lEb_Dr_2M6tdkdZ6YqYAiF6dfPw=/1800x1200/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2010__01__cinnamon-toast-horiz-a-1800-5cb4bf76bb254da796a137885af8cb09.jpg width="230" height="200">
+<img id='toast' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.simplyrecipes.com/thmb/lEb_Dr_2M6tdkdZ6YqYAiF6dfPw=/1800x1200/filters:fill(auto,1)/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2010__01__cinnamon-toast-horiz-a-1800-5cb4bf76bb254da796a137885af8cb09.jpg width="230" height="200">
 <!--cereal-->
-<img id='cereal' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.verywellhealth.com/thmb/LiEYTC9ZucAPtgIkxivHFQQpXUY=/1333x1000/smart/filters:no_upscale()/30D7A016-ABA5-48DD-BE39-3E7A223A03BF-96f2ba9e6c724dc9b2ba638b0c0f44a2.jpeg width="230" height="200">
+<img id='cereal' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.verywellhealth.com/thmb/LiEYTC9ZucAPtgIkxivHFQQpXUY=/1333x1000/smart/filters:no_upscale()/30D7A016-ABA5-48DD-BE39-3E7A223A03BF-96f2ba9e6c724dc9b2ba638b0c0f44a2.jpeg width="230" height="200">
 <!--waffles-->
-<img id= 'waffles'style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://storcpdkenticomedia.blob.core.windows.net/media/recipemanagementsystem/media/recipe-media-files/recipes/retail/x17/2020_belgian-style-waffles_16700_760x580.jpg?ext=.jpg width="200" height="200">
+<img id= 'waffles'style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://storcpdkenticomedia.blob.core.windows.net/media/recipemanagementsystem/media/recipe-media-files/recipes/retail/x17/2020_belgian-style-waffles_16700_760x580.jpg?ext=.jpg width="200" height="200">
 <!--mac and cheese-->
-<img id='mac_and_cheese' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.cookingclassy.com/wp-content/uploads/2018/07/stovetop-macaroni-cheese-1.jpg width="160" height="200">
+<img id='mac_and_cheese' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.cookingclassy.com/wp-content/uploads/2018/07/stovetop-macaroni-cheese-1.jpg width="160" height="200">
 <!--pasta-->
-<img id='pasta' style="-webkit-user-select: none;margin-left:6%;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://images.immediate.co.uk/production/volatile/sites/30/2021/04/Pasta-alla-vodka-f1d2e1c.jpg width="200" height="200">
+<img id='pasta' style="-webkit-user-select: none;display: none;margin-left:6%;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://images.immediate.co.uk/production/volatile/sites/30/2021/04/Pasta-alla-vodka-f1d2e1c.jpg width="200" height="200">
 <!--schnitezal-->
-<img id='snietzel' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.thespruceeats.com/thmb/cckc3_4QUQ79kSFhcLPM8xg9F3g=/3797x2848/smart/filters:no_upscale()/wiener-schnitzel-recipe-1447089-Hero-5b587d6c46e0fb0071b0059d.jpg width="200" height="200">
+<img id='snietzel' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.thespruceeats.com/thmb/cckc3_4QUQ79kSFhcLPM8xg9F3g=/3797x2848/smart/filters:no_upscale()/wiener-schnitzel-recipe-1447089-Hero-5b587d6c46e0fb0071b0059d.jpg width="200" height="200">
 <!--casadilla-->
-<img id='cheese_quesadillas' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://ohsweetbasil.com/wp-content/uploads/how-to-make-a-perfect-quesadilla-10.jpg width="170" height="200">
+<img id='cheese_quesadillas' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://ohsweetbasil.com/wp-content/uploads/how-to-make-a-perfect-quesadilla-10.jpg width="170" height="200">
 <!--baked potato-->
-<img id='baked_potato' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://momsdinner.net/wp-content/uploads/2020/02/Instant-Pot-Baked-Potatoes-loaded-with-toppings-2.jpg width="200" height="200">
+<img id='baked_potato' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://momsdinner.net/wp-content/uploads/2020/02/Instant-Pot-Baked-Potatoes-loaded-with-toppings-2.jpg width="200" height="200">
 <!--stir fry-->
-<img id='stir_fry' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.cookingclassy.com/wp-content/uploads/2019/12/chicken-stir-fry-1.jpg width="170" height="200">
+<img id='stir_fry' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.cookingclassy.com/wp-content/uploads/2019/12/chicken-stir-fry-1.jpg width="170" height="200">
 <!--rice-->
-<img id='rice' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://cookieandkate.com/images/2019/05/perfect-brown-rice-recipe-1.jpg width="170" height="200">
+<img id='rice' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://cookieandkate.com/images/2019/05/perfect-brown-rice-recipe-1.jpg width="170" height="200">
 <!--tomato soup-->
-<img id='tomato_soup' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.cookingclassy.com/wp-content/uploads/2020/10/tomato-soup-7.jpg width="180" height="200">
+<img id='tomato_soup' style="-webkit-user-select: none;margin: auto;display: none;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.cookingclassy.com/wp-content/uploads/2020/10/tomato-soup-7.jpg width="180" height="200">
 <!--steak dinner-->
-<img id='steak_dinner' style="-webkit-user-select: none;margin-left:9%;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://thestayathomechef.com/wp-content/uploads/2019/05/Skillet-Steak-and-Asparagus-1.jpg width="200" height="200">
+<img id='steak_dinner' style="-webkit-user-select: none;display: none;margin-left:9%;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://thestayathomechef.com/wp-content/uploads/2019/05/Skillet-Steak-and-Asparagus-1.jpg width="200" height="200">
 <!--chicken dinner-->
-<img id='chicken_dinner' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.brit.co/media-library/image.jpg?id=21560183&width=600&quality=90 width="200" height="200">
+<img id='chicken_dinner' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.brit.co/media-library/image.jpg?id=21560183&width=600&quality=90 width="200" height="200">
 <!--turkey dinner-->
-<img id='turkey_dinner' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18183017/fc29bi030-04-main.jpg width="200" height="200">
+<img id='turkey_dinner' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/18183017/fc29bi030-04-main.jpg width="200" height="200">
 <!--burger-->
-<img id='hamburger' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://insanelygoodrecipes.com/wp-content/uploads/2020/10/Hamburger-with-Sesame-Seeds-Cheese-and-Veggies-500x375.png width="240" height="200">
+<img id='hamburger' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://insanelygoodrecipes.com/wp-content/uploads/2020/10/Hamburger-with-Sesame-Seeds-Cheese-and-Veggies-500x375.png width="240" height="200">
 <!--pork dinner-->
-<img id='pork_dinner' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.recipetineats.com/wp-content/uploads/2016/09/Baked-Pork-Chops_2.jpg width="200" height="200">
+<img id='pork_dinner' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://www.recipetineats.com/wp-content/uploads/2016/09/Baked-Pork-Chops_2.jpg width="200" height="200">
 <!--shrimp dinner-->
-<img id='shrimp_dinner' style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://cafedelites.com/wp-content/uploads/2018/06/Creamy-Garlic-Shrimp-IMAGE-68.jpg width="170" height="200">
+<img id='shrimp_dinner' style="-webkit-user-select: none;display: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://cafedelites.com/wp-content/uploads/2018/06/Creamy-Garlic-Shrimp-IMAGE-68.jpg width="170" height="200">
 
 
 
 
 
-
+<script>
+    //initializes the page with valid pictures
+    
+    function initializePage(){
+        var recipesR = localStorage.getItem('recipes');
+        let recipesRArr = recipesR.split(",");
+        for(let rec of recipesRArr){
+            if(rec == 'salad'){
+                document.getElementById('salad').style.display = 'initial';
+            }
+            if(rec == 'grilled_cheese'){
+                document.getElementById("grilled_cheese").style.display = 'initial'; //show img (shows by default)
+            }
+            if(rec == 'eggs'){
+                document.getElementById("eggs").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'toast'){
+                document.getElementById("toast").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'cereal'){
+                document.getElementById("cereal").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'waffles'){
+                document.getElementById("waffles").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'pasta'){
+                document.getElementById("pasta").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'mac_and_cheese'){
+                document.getElementById("mac_and_cheese").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'snietzel'){
+                document.getElementById("snietzel").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'cheese_quesadilla'){
+                document.getElementById("cheese_quesadilla").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'baked_potatoes'){
+                document.getElementById("baked_potatoes").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'stir_fry'){
+                document.getElementById("stir_fry").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'rice'){
+                document.getElementById("rice").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'tomato_soup'){
+                document.getElementById("tomato_soup").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'steak_dinner'){
+                document.getElementById("steak_dinner").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'chicken_dinner'){
+                document.getElementById("chicken_dinner").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'turkey_dinner'){
+                document.getElementById("turkey_dinner").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'hamburger'){
+                document.getElementById("hamburger").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'pork_dinner'){
+                document.getElementById("pork_dinner").style.display = 'initial'; //show img (shows by default)
+            } 
+            if(rec == 'shrimp_dinner'){
+                document.getElementById("shrimp_dinner").style.display = 'initial'; //show img (shows by default)
+            } 
+        }
+    }
+    
+    initializePage();
+    </script>
