@@ -1,34 +1,43 @@
+<!--halal does not work-->
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<style>
+body {
+  font-family: "Trirong", serif;
+}
+</style>
+</head>
+
 <!--https://www.w3schools.com/graphics/svg_rect.asp and https://www.tutorialspoint.com/How-to-Insert-Hyperlink-in-HTML-Page#:~:text=To%20make%20a%20hyperlink%20in,a%20href%3D%E2%80%9D%20%E2%80%9D%3E.-->
 <!DOCTYPE html>
 <html>
 <body>
 	<svg width="9000" height="80">
 		<rect width="1500" height="100" style="fill:#93C572;"></rect>
-		<text x="20" y="60" font-weight="bold" style="font-size:50px" style="color:#ffffff;">CollegeCooks</text>
+		<text x="20" y="60" font-weight="bold" style="font-size:50px; color:#ffffff;">CollegeCooks</text>
 	</svg>
 </body>
 <body>
 	<svg width="9000" height="50">
-		<rect width="1500" height="30" style="fill:rgb(201, 201, 201);"></rect>>
+		<rect width="1500" height="30" style="fill:rgb(221, 221, 221);"></rect>>
 		<text x="20" y="20">
 			<a href=test.htm>Home Page</a>
 		</text>
-		<text x="120" y="20">
+		<text x="140" y="20">
 			<a href=myfridge.html>My Fridge</a>
 		</text>
-		<text x="220" y="20">
+		<text x="250" y="20">
 			<a href=test.htm>My account</a>
 		</text>
-		<text x="320" y="20">
+		<text x="380" y="20">
 			<a href=welcome.html>Welcome Survey</a>
 		</text>
-
 	  </svg>
 </body>
 <!DOCTYPE html>
 
 
-<text style="margin-left:40%; font-size:60px">Home Page</text><br>
+<text style="margin-left:40%; font-size:60px; margin-top:0px">Home Page</text>
 
 
 
@@ -111,6 +120,7 @@ function findRecipes()
   localStorage.setItem('cookTime', cookTime);
 
   let mealName = ['salad', 'grilled_cheese', 'eggs', 'toast', 'cereal', 'waffles', 'mac_and_cheese', 'pasta', 'snietzel', 'cheese_quesadillas', 'baked_potatoes', 'stir_fry', 'rice', 'tomato_soup', 'steak_dinner', 'chicken_dinner', 'turkey_dinner', 'hamburger', 'pork_dinner', 'shrimp_dinner'];
+  let none = [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true]
   let kosher = [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,false];
   let halal = [true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true];
   let vegetarian = [true,true,true,true,true,true,true,true,false,false,true,true,true,true,false,false,false,false,false,false]; 
@@ -149,6 +159,11 @@ function findRecipes()
 		}
 		else if(diet == 'vegan'){
 			if(vegan[i]){
+				approvedMeals.push(i);
+			}
+		}
+		else if(diet == 'none'){
+			if(none[i]){
 				approvedMeals.push(i);
 			}
 		}
@@ -192,6 +207,7 @@ function findRecipes()
   }
   alert(finalMeals);
 
+  //Halal doesn't work for this for some reason, Kosher, Vegan, and vegetarian all work
   for(let f of finalMeals)
   {
 	  mealIng = ingredients[f].split(",");
@@ -209,6 +225,8 @@ function findRecipes()
 	  }
   }
   alert(makeableMeals);
+  localStorage.setItem('recipes', makeableMeals);
+  window.location.replace('results.html');
 }
 
 
@@ -254,13 +272,14 @@ text-align:center
 </style>
 
 <div class="container">
-<p style="text-align:center">Welcome to CollegeCooks</p>
+<p style="text-align:center; color:#ffffff">Welcome to CollegeCooks</p>
 </div>
 
-<p style="text-align:center; font-size: 130%;" >Can't decide what to eat?</p>
-<p style = "text-align:center; font-size: 130%;">Not sure if you have the proper ingredients?</p>
-<p style = "text-align:center; font-size: 130%">Are you limited on cooking time? </p>
-<p style = "text-align:center; font-size: 130%">With three easy steps CollegeCooks is here to help.</p>
+
+	<p style="font-size:20px; text-align:center">Can't decide what to eat?<br>Not sure if you have the proper ingredients?<br>Are you limited on cooking time?<br>With three easy steps CollegeCooks is here to help.</p>
+<br>
+
+
 
 
 
