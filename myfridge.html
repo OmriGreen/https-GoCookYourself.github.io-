@@ -9,29 +9,33 @@
         <svg width="9000" height="50">
             <rect width="1500" height="30" style="fill:rgb(201, 201, 201);"></rect>>
             <text x="20" y="20">
-                <a href=file:///C:/Users/ledah/OneDrive/Desktop/test.htm>Home Page</a>
+                <a href=test.htm>Home Page</a>
             </text>
             <text x="120" y="20">
-                <a href=file:///C:/Users/ledah/OneDrive/Desktop/test.htm>My Fridge</a>
+                <a href=myfridge.html>My Fridge</a>
             </text>
             <text x="220" y="20">
-                <a href=file:///C:/Users/ledah/OneDrive/Desktop/test.htm>My account</a>
+                <a href=test.htm>My account</a>
             </text>
             <text x="320" y="20">
-                <a href=file:///C:/Users/ledah/OneDrive/Desktop/welcome.html?fname=Lexi&lname=f&email=g>Welcome Survey</a>
+                <a href=welcome.html>Welcome Survey</a>
             </text>
         </svg>
     </body>
 </html>
 
+
+<text style="margin-left:40%; font-size:60px">My Fridge</text><br>
+
+
+
 <!--Scripts for Adding things to your fridge-->
 <script>
 
 
-
 </script>
 <!--image banner-->
-<img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://static.wixstatic.com/media/749b22_c19bf71c30d34e5d8098b9db7d34fd81~mv2.jpg/v1/fill/w_1960,h_876,al_c,q_85,usm_0.66_1.00_0.01/smart-food-banner.webp format=2500w" width="1500" height="600">
+<br><img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://static.wixstatic.com/media/749b22_c19bf71c30d34e5d8098b9db7d34fd81~mv2.jpg/v1/fill/w_1960,h_876,al_c,q_85,usm_0.66_1.00_0.01/smart-food-banner.webp format=2500w" width="1500" height="600">
 
 <!--changes the background color-->
 <html>
@@ -44,61 +48,260 @@
 <br>
 <br>
 
+<script>
+    let ingredients = [];
+    function saveIngredients()
+    {
+        if(document.getElementById("milk").checked)
+        {
+            ingredients.push('milk');
+        }
+        if(document.getElementById("eggs").checked)
+        {
+            ingredients.push('eggs');
+        }
+        if(document.getElementById("cheese").checked)
+        {
+            ingredients.push('cheese');
+        }
+        if(document.getElementById("buns").checked)
+        {
+            ingredients.push('buns');
+        }
+        if(document.getElementById("bread").checked)
+        {
+            ingredients.push('bread');
+        }
+        if(document.getElementById("butter").checked)
+        {
+            ingredients.push('butter');
+        }
+        if(document.getElementById("pasta").checked)
+        {
+            ingredients.push('pasta');
+        }
+        if(document.getElementById("potato").checked)
+        {
+            ingredients.push('potato');
+        }
+        if(document.getElementById("lettuce").checked)
+        {
+            ingredients.push('lettuce');
+        }
+        if(document.getElementById("dressing").checked)
+        {
+            ingredients.push('dressing');
+        }
+        if(document.getElementById("condiments").checked)
+        {
+            ingredients.push('condiments');
+        }
+        if(document.getElementById("rice").checked)
+        {
+            ingredients.push('rice');
+        }
+        if(document.getElementById("vegetables").checked)
+        {
+            ingredients.push('vegetables');
+        }
+        if(document.getElementById("turkey").checked)
+        {
+            ingredients.push('turkey');
+        }
+        if(document.getElementById("tomato").checked)
+        {
+            ingredients.push('tomato');
+        }
+        if(document.getElementById("chicken").checked)
+        {
+            ingredients.push('chicken');
+        }
+        if(document.getElementById("steak").checked)
+        {
+            ingredients.push('steak');
+        }
+        if(document.getElementById("beef").checked)
+        {
+            ingredients.push('beef');
+        }
+
+        if(document.getElementById("pork").checked)
+        {
+            ingredients.push('pork');
+        }
+
+        if(document.getElementById("onion").checked)
+        {
+            ingredients.push('onion');
+        }
+
+        if(document.getElementById("cereal").checked)
+        {
+            ingredients.push('cereal');
+        }
+
+        if(document.getElementById("waffle batter").checked)
+        {
+            ingredients.push('waffle batter');
+        }
+
+        if(document.getElementById("oil").checked)
+        {
+            ingredients.push('oil');
+        }
+
+        if(document.getElementById("tortilla").checked)
+        {
+            ingredients.push('tortilla');
+        }
+        
+        if(document.getElementById("soy sauce").checked)
+        {
+            ingredients.push('soy sauce');
+        }
+
+        if(document.getElementById("peppers").checked)
+        {
+            ingredients.push('peppers');
+        }
+
+        if(document.getElementById("seasoning").checked)
+        {
+            ingredients.push('seasoning');
+        }
+        if(document.getElementById("shrimp").checked)
+        {
+            ingredients.push('shrimp');
+        }
+
+        localStorage.setItem('ingredients', ingredients);
+    }
+
+    function saveAndRedirectFridge()
+    {
+        saveIngredients();
+        window.location.replace('test.htm');
+    }
+</script>
+
 <text style="margin-left:20%;; font-size: 300%;" >My Fridge:</text>
 
 
 
 
     <br>
-    <p style="margin-left:25%; margin-right:10%;">Please select the ingredients in your kitchen:</p>
+    <p style="margin-left:25%; margin-right:10%; font-size:20px">Please select the ingredients in your kitchen:</p>
     <form id="userDiet">
-      <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:30%;">
-      <label for="None">Milk</label><br>
-      <input type="checkbox" id="Vegetarian" name="diet_option" value="Vegetarian"style="margin-left:30%;">
-      <label for="Vegetarian">Eggs</label><br>
-      <input type="checkbox" id="Halal" name="diet_option" value="Halal"style="margin-left:30%;">
-      <label for="Halal">Cheese</label><br>
-      <input type="checkbox" id="Kosher" name="diet_option" value="Kosher"style="margin-left:30%;">
-      <label for="Kosher">bread</label><br>
-      <input type="checkbox" id="Vegan" name="diet_option" value="Vegan"style="margin-left:30%;">
-      <label for="Vegan">butter</label><br>
-      <!--<input type="checkbox" id="Gluten Free" name="diet_option" value="Gluten Free"style="margin-left:45%;">
-      <label for="Gluten Free">Gluten Free</label><br>
-      <input type="checkbox" id ="Nut allergy" name="diet_option" value="Nut allergy"style="margin-left:45%;">
-      <label for="Nut allergy">Nut allergy</label><br>-->
-      <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:30%;">
-      <label for="None">pasta</label><br>
-      <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:30%;">
-      <label for="None">potatoe</label><br>
-      <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:30%;">
-      <label for="None">lettuce</label><br>
-      <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:30%;">
-      <label for="None">dressing</label><br>
-      <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:30%;">
-      <label for="None">condiments</label><br>
-      <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:30%;">
-      <label for="None">rice</label><br>
-      <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:30%;">
-      <label for="None">vegitables</label><br>
-      <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:30%;">
-      <label for="None">turkey</label><br>
-      <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:30%;">
-      <label for="None">chicken</label><br>
-      <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:30%;">
-      <label for="None">steak</label><br>
-      <input type="checkbox" id="None" name="diet_option" value="None"style="margin-left:30%;">
-      <label for="None">beef</label><br>
+      <input type="checkbox" id="milk" name="milk" value="milk" style="margin-left:30%;">
+      <label for="milk"style="font-size:20px">milk</label><br>
 
+      <input type="checkbox" id="tomato" name="tomato" value="tomato" style="margin-left:30%;">
+      <label for="tomato"style="font-size:20px">tomato</label><br>
 
+      <input type="checkbox" id="cereal" name="cereal" value="cereal" style="margin-left:30%;">
+      <label for="cereal"style="font-size:20px">cereal</label><br>
 
+      <input type="checkbox" id="waffle batter" name="waffle batter" value="waffle batter" style="margin-left:30%;">
+      <label for="waffle batter"style="font-size:20px">waffle batter</label><br>
 
+      <input type="checkbox" id="oil" name="oil" value="oil" style="margin-left:30%;">
+      <label for="oil"style="font-size:20px">oil</label><br>
 
-      <button type="button" onclick="saveAndRedirect();" id="Done" name="Done" style="margin-left:30%">Save</button>
+      <input type="checkbox" id="onion" name="onion" value="onion" style="margin-left:30%;">
+      <label for="onion"style="font-size:20px">onion</label><br>
+
+      <input type="checkbox" id="eggs" name="eggs" value="eggs"style="margin-left:30%;">
+      <label for="eggs"style="font-size:20px">eggs</label><br>
+
+      <input type="checkbox" id="cheese" name="cheese" value="cheese"style="margin-left:30%;">
+      <label for="cheese"style="font-size:20px">cheese</label><br>
+
+      <input type="checkbox" id="bread" name="bread" value="bread"style="margin-left:30%;">
+      <label for="bread"style="font-size:20px">bread</label><br>
+
+      <input type="checkbox" id="butter" name="butter" value="butter"style="margin-left:30%;">
+      <label for="butter"style="font-size:20px">butter</label><br>
+
+      <input type="checkbox" id="pasta" name="pasta" value="pasta"style="margin-left:30%;">
+      <label for="pasta"style="font-size:20px">pasta</label><br>
+
+      <input type="checkbox" id="potato" name="potato" value="potato"style="margin-left:30%;">
+      <label for="potato"style="font-size:20px">potato</label><br>
+
+      <input type="checkbox" id="lettuce" name="lettuce" value="lettuce"style="margin-left:30%;">
+      <label for="lettuce"style="font-size:20px">lettuce</label><br>
+
+      <input type="checkbox" id="dressing" name="dressing" value="dressing"style="margin-left:30%;">
+      <label for="dressing"style="font-size:20px">dressing</label><br>
+
+      <input type="checkbox" id="condiments" name="condiments" value="condiments"style="margin-left:30%;">
+      <label for="condiments"style="font-size:20px">condiments</label><br>
+
+      <input type="checkbox" id="rice" name="rice" value="rice"style="margin-left:30%;">
+      <label for="rice"style="font-size:20px">rice</label><br>
+
+      <input type="checkbox" id="vegetables" name="vegetables" value="vegetables"style="margin-left:30%;">
+      <label for="vegetables"style="font-size:20px">vegetables</label><br>
+
+      <input type="checkbox" id="turkey" name="turkey" value="turkey"style="margin-left:30%;">
+      <label for="turkey"style="font-size:20px">turkey</label><br>
+
+      <input type="checkbox" id="chicken" name="chicken" value="chicken"style="margin-left:30%;">
+      <label for="chicken"style="font-size:20px">chicken</label><br>
+
+      <input type="checkbox" id="steak" name="steak" value="steak"style="margin-left:30%;">
+      <label for="steak"style="font-size:20px">steak</label><br>
+
+      <input type="checkbox" id="beef" name="beef" value="beef"style="margin-left:30%;">
+      <label for="beef"style="font-size:20px">beef</label><br>
+
+      <input type="checkbox" id="pork" name="pork" value="pork"style="margin-left:30%;">
+      <label for="pork"style="font-size:20px">pork</label><br>
+
+      <input type="checkbox" id="tortilla" name="tortilla" value="tortilla"style="margin-left:30%;">
+      <label for="tortilla"style="font-size:20px">tortilla</label><br>
+      
+      <input type="checkbox" id="soy sauce" name="soy sauce" value="soy sauce"style="margin-left:30%;">
+      <label for="soy sauce"style="font-size:20px">soy sauce</label><br>
+      
+      <input type="checkbox" id="peppers" name="peppers" value="peppers"style="margin-left:30%;">
+      <label for="peppers"style="font-size:20px">peppers</label><br>
+
+      <input type="checkbox" id="shrimp" name="shrimp" value="shrimp"style="margin-left:30%;">
+      <label for="shrimp"style="font-size:20px">shrimp</label><br>
+      
+      <input type="checkbox" id="buns" name="buns" value="buns"style="margin-left:30%;">
+      <label for="buns"style="font-size:20px">buns</label><br>
+
+      <input type="checkbox" id="seasoning" name="seasoning" value="seasoning"style="margin-left:30%;">
+      <label for="seasoning"style="font-size:20px">seasoning</label><br>
+
+      <br>
+      <button type="button" onclick="saveAndRedirectFridge();" id="Save" name="Save" style="margin-left:30%">Save</button>
       
     </form>
     <br>
 <br>
 <br>
+
+<head>
+	<title>HTML Button Generator</title>
+	<style>
+		button {
+			color: #ffffff;
+			background-color: #93C572;
+			font-size: 40px;
+			border: 1px solid #000000;
+			border-radius: 12px;
+			padding: 10px 20px;
+			cursor: pointer
+		}
+		button:hover {
+			color: #c7c7c7;
+			background-color: #5c5b5b;
+		}
+	</style>
+</head>
 <br>
 <br>
 

@@ -10,16 +10,16 @@
         <svg width="9000" height="50">
             <rect width="1500" height="30" style="fill:rgb(201, 201, 201);"></rect>>
             <text x="20" y="20">
-                <a href=file:///C:/Users/ledah/OneDrive/Desktop/test.htm>Home Page</a>
+                <a href=test.htm>Home Page</a>
             </text>
             <text x="120" y="20">
-                <a href=file:///C:/Users/ledah/OneDrive/Desktop/test.htm>My Fridge</a>
+                <a href=myfridge.html>My Fridge</a>
             </text>
             <text x="220" y="20">
-                <a href=file:///C:/Users/ledah/OneDrive/Desktop/test.htm>My account</a>
+                <a href=test.htm>My account</a>
             </text>
             <text x="320" y="20">
-                <a href=file:///C:/Users/ledah/OneDrive/Desktop/welcome.html?fname=Lexi&lname=f&email=g>Welcome Survey</a>
+                <a href=welcome.html>Welcome Survey</a>
             </text>
     
           </svg>
@@ -35,9 +35,12 @@
        <body style="background-color:#fcfaeb;">
     </html>
     
-    
+    <text style="margin-left:35%; font-size:60px">Welcome Survey</text><br>
+
+
+
     <!--image banner-->
-    <img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://static.wixstatic.com/media/749b22_c19bf71c30d34e5d8098b9db7d34fd81~mv2.jpg/v1/fill/w_1960,h_876,al_c,q_85,usm_0.66_1.00_0.01/smart-food-banner.webp format=2500w" width="1500" height="600">
+    <br><img style="-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src=https://static.wixstatic.com/media/749b22_c19bf71c30d34e5d8098b9db7d34fd81~mv2.jpg/v1/fill/w_1960,h_876,al_c,q_85,usm_0.66_1.00_0.01/smart-food-banner.webp format=2500w" width="1500" height="600">
     
     
     
@@ -69,10 +72,6 @@
 <br>
 
 <script>
-src = "html"
-</script>
-
-<script>
   let fname = '';
   let lname = '';
   let email = '';
@@ -88,45 +87,31 @@ function saveDietaryInfo()
 {
   if(document.getElementById("None").checked)
   {
-    dietRestr.push('None');
+    dietRestr.push('none');
   }
   if(document.getElementById('Vegetarian').checked)
   {
-    dietRestr.push('Vegetarian');
+    dietRestr.push('vegetarian');
   }
   if(document.getElementById('Vegan').checked)
   {
-    dietRestr.push('Vegan');
+    dietRestr.push('vegan');
   }
   if(document.getElementById('Kosher').checked)
   {
-    dietRestr.push('Kosher');
+    dietRestr.push('kosher');
   }
   if(document.getElementById('Halal').checked)
   {
-    dietRestr.push('Halal');
+    dietRestr.push('halal');
   }
-  /*if(document.getElementById('Gluten Free').checked)
-  {
-    dietRestr.push('Gluten Free');
-  }
-  if(document.getElementById('Nut Allergy').checked)
-  {
-    dietRestr.push('Nut Allergy');
-  }*/
-  allRestr = '';
-  for(let i in dietRestr)
-  {
-    allRestr += dietRestr[i];
-    allRestr += ', ';
-  }
-  //fs.writeFile('userdata.txt', allRestr);
+  localStorage.setItem('dietRestr', dietRestr);
 }
 function saveAndRedirect()
 {
   saveUserInfo();
   saveDietaryInfo();
-  window.location.replace('test.htm');
+  window.location.replace('myfridge.html');
 }
 </script>
 
@@ -153,11 +138,8 @@ function saveAndRedirect()
   <label for="Kosher">Kosher</label><br>
   <input type="checkbox" id="Vegan" name="diet_option" value="Vegan"style="margin-left:45%;">
   <label for="Vegan">Vegan</label><br>
-  <!--<input type="checkbox" id="Gluten Free" name="diet_option" value="Gluten Free"style="margin-left:45%;">
-  <label for="Gluten Free">Gluten Free</label><br>
-  <input type="checkbox" id ="Nut allergy" name="diet_option" value="Nut allergy"style="margin-left:45%;">
-  <label for="Nut allergy">Nut allergy</label><br>-->
-  <button type="button" onclick="saveAndRedirect();" id="Done" name="Done" style="margin-left:45%">Done</button>
+  <br><br>
+  <button type="button" onclick="saveAndRedirect();" id="Submit" name="Submit" style="margin-left:47%">Submit</button>
   
 </form>
 <br>
@@ -168,7 +150,7 @@ function saveAndRedirect()
 		button {
 			color: #ffffff;
 			background-color: #93C572;
-			font-size: 40px;
+			font-size: 25px;
 			border: 1px solid #000000;
 			border-radius: 12px;
 			padding: 10px 20px;
@@ -180,6 +162,7 @@ function saveAndRedirect()
 		}
 	</style>
 </head>
+
 <body>
 	<!--<button type="button" onclick="saveAndRedirect();" id="Done" name="Done" style="margin-left:45%">Done</button>-->
 </body>
